@@ -5,8 +5,6 @@ WORKDIR /app
 
 # Copy pom.xml first for better Docker layer caching
 COPY pom.xml .
-COPY .mvn .mvn
-COPY mvnw mvnw
 
 # Download dependencies
 RUN mvn dependency:go-offline -B
